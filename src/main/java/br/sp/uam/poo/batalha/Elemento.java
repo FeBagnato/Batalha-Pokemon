@@ -1,4 +1,6 @@
-public class Elemento{
+package br.sp.uam.poo.batalha;
+
+public class Elemento {
    private String nomeElemento;
    private String fraqueza;
    private String efetivo;

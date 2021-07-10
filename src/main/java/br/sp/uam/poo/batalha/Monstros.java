@@ -1,4 +1,6 @@
-public class Monstros{
+package br.sp.uam.poo.batalha;
+
+public class Monstros {
    Golpes golpe;
    private String nome;
    private Elemento elemento;

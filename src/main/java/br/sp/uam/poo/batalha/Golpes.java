@@ -1,4 +1,6 @@
-public class Golpes{
+package br.sp.uam.poo.batalha;
+
+public class Golpes {
    private String[] nomeGolpe = new String[2];
    private int[] forcaGolpe = new int[2];
    private Elemento elementoGolpe;
