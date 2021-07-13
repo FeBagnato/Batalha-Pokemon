@@ -3,6 +3,7 @@ package br.sp.uam.poo.batalha;
 public class Monstros {
    Golpes golpe;
    private String nome;
+   private boolean valid = true;
    private Elemento elemento;
    private int vida;
    private int forca;
@@ -12,7 +13,7 @@ public class Monstros {
    public Monstros(String pokeNome){
       this.nome = pokeNome;
 
-      if(pokeNome.equals("Aegislash")){
+      if(pokeNome.equals("aegislash")){
          this.elemento = new Elemento("fantasma");
          this.golpe = new Golpes(pokeNome);
          this.vida = 510;
@@ -20,7 +21,7 @@ public class Monstros {
          this.defesa = 87;
          this.velocidade = 27;
       }
-      else if(pokeNome.equals("Darkrai")){
+      else if(pokeNome.equals("darkrai")){
          this.elemento = new Elemento("sombrio");
          this.golpe = new Golpes(pokeNome);
          this.vida = 690;
@@ -28,7 +29,7 @@ public class Monstros {
          this.defesa = 46;
          this.velocidade = 24;
       }
-      else if(pokeNome.equals("Cresselia")){
+      else if(pokeNome.equals("cresselia")){
          this.elemento = new Elemento("psiquico");
          this.golpe = new Golpes(pokeNome);
          this.vida = 564;
@@ -36,7 +37,7 @@ public class Monstros {
          this.defesa = 47;
          this.velocidade = 28;
       }
-      else if(pokeNome.equals("Poipole")){
+      else if(pokeNome.equals("poipole")){
          this.elemento = new Elemento("venenoso");
          this.golpe = new Golpes(pokeNome);
          this.vida = 561;
@@ -44,7 +45,7 @@ public class Monstros {
          this.defesa = 46;
          this.velocidade = 26;
       }
-      else if(pokeNome.equals("Garchomp")){
+      else if(pokeNome.equals("garchomp")){
          this.elemento = new Elemento("dragao");
          this.golpe = new Golpes(pokeNome);
          this.vida = 642;
@@ -52,7 +53,7 @@ public class Monstros {
          this.defesa = 35;
          this.velocidade = 28;
       }
-      else if(pokeNome.equals("Alcremie")){
+      else if(pokeNome.equals("alcremie")){
          this.elemento = new Elemento("fada");
          this.golpe = new Golpes(pokeNome);
          this.vida = 640;
@@ -60,6 +61,12 @@ public class Monstros {
          this.defesa = 50;
          this.velocidade = 24;
       }
+      else
+         this.valid = false;
+   }
+   
+   public boolean isValid(){
+      return this.valid;
    }
 
    public String getNome(){
